@@ -1,18 +1,15 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+require('dotnev').config();
 
 export const environment = {
   production: false,
   name: 'dev',
-  providerApiKey: '',
-  subscriptionKey: '',
+  keystoreApi: 'https://sandbox.meeco.me/keystore',
+  vaultApi: 'https://sandbox.meeco.me/vault',
+  subscriptionKey: process.env.API_KEY,
   recaptchaEnabled: false,
-};
-
-window.API_CONFIG = {
-  keystoreApiBasePath: 'https://sandbox.meeco.me/keystore',
-  vaultApiBasePath: 'https://sandbox.meeco.me/vault',
 };
 
 /*
