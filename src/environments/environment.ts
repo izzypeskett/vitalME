@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  name: 'dev',
+  providerApiKey: '',
+  subscriptionKey: '',
+  recaptchaEnabled: false,
+};
+
+window.API_CONFIG = {
+  keystoreApiBasePath: 'https://sandbox.meeco.me/keystore',
+  vaultApiBasePath: 'https://sandbox.meeco.me/vault',
 };
 
 /*

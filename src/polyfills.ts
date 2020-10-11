@@ -52,14 +52,22 @@
  *
  */
 
+// required for bson library
+(window as any).global = window;
+// Required for JSRP
+const buffer = require('buffer');
+(window as any).Buffer = buffer;
+(window as any).process = {
+  browser: true,
+};
+
 import './zone-flags';
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
 
-import 'zone.js/dist/zone';  // Included with Angular CLI.
-
+import 'zone.js/dist/zone'; // Included with Angular CLI.
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
